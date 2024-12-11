@@ -12,7 +12,15 @@ public class Main {
 
 
     private static void bubbleSort(String[] names) {
-
+        for (int i = 0; i < names.length - 1; i++) {
+            for (int j = 0; j < names.length - i - 1; j++) {
+                if (names[j].compareTo(names[j + 1]) > 0) {
+                    String temp = names[j];
+                    names[j] = names[j + 1];
+                    names[j + 1] = temp;
+                }
+            }
+        }
     }
 
     private static void printArray(String[] names) {
