@@ -22,6 +22,11 @@ public class Main {
     }
 
     private static boolean checkLine(int[] numbers) {
+        for (int i = 0; i < numbers.length - 1; i++) {
+            if (!isBefore(numbers[i], numbers[i + 1])) {
+                return true;
+            }
+        }
         return false;
     }
 
